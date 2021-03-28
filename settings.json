@@ -1,0 +1,271 @@
+{
+  "workbench.colorTheme": "Noctis Sereno",
+  "workbench.iconTheme": "vscode-icons",
+  "workbench.activityBar.visible": false,
+  "workbench.sideBar.location": "left",
+  "editor.fontFamily": "MonoLisa",
+  "editor.fontLigatures": true,
+  "editor.fontSize": 14,
+  "editor.lineNumbers": "relative",
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
+  "tabnine.experimentalAutoImports": true,
+  "vim.easymotion": true,
+  "vim.surround": true,
+  "vim.enableNeovim": true,
+  "vim.neovimPath": "/usr/local/bin/nvim",
+  "vim.useCtrlKeys": true,
+  "vim.useSystemClipboard": true,
+  "vim.whichwrap": "b,s,h,l",
+  "vim.vimrc.enable": true,
+  "vim.vimrc.path": "~/Library/Application Support/Code/User/.vimrc",
+  // 普通模式自动退出中文输入法
+  "vim.autoSwitchInputMethod.enable": true,
+  "vim.autoSwitchInputMethod.defaultIM": "com.apple.keylayout.ABC",
+  "vim.autoSwitchInputMethod.obtainIMCmd": "/usr/local/bin/im-select",
+  "vim.autoSwitchInputMethod.switchIMCmd": "/usr/local/bin/im-select {im}",
+  "vim.leader": "<Space>",
+  "vim.normalModeKeyBindingsNonRecursive": [
+    // 复制到末尾类似删除修改
+    {
+      "before": ["Y"],
+      "after": ["y", "g", "_"]
+    },
+    // FIXME https://github.com/VSCodeVim/Vim/pull/5080
+    {
+      "before": ["j"],
+      "after": ["g", "j"]
+    },
+    {
+      "before": ["k"],
+      "after": ["g", "k"]
+    },
+    {
+      "before": ["J"],
+      "after": ["5", "g", "j"]
+    },
+    {
+      "before": ["K"],
+      "after": ["5", "g", "k"]
+    },
+    // 移动至行首、行尾
+    {
+      "before": ["H"],
+      "after": ["^"]
+    },
+    {
+      "before": ["L"],
+      "after": ["g", "_"]
+    },
+    // 删除而不复制
+    {
+      "before": ["d"],
+      "after": ["\"", "_", "d"]
+    },
+    {
+      "before": ["D"],
+      "after": ["\"", "_", "D"]
+    },
+    // 修改而不复制
+    {
+      "before": ["c"],
+      "after": ["\"", "_", "c"]
+    },
+    {
+      "before": ["C"],
+      "after": ["\"", "_", "C"]
+    },
+    // 快速修复
+    {
+      "before": ["g", "f"],
+      "commands": ["editor.action.quickFix"]
+    },
+    // 跳转符号、行
+    {
+      "before": ["g", "s"],
+      "commands": ["workbench.action.gotoSymbol"]
+    },
+    {
+      "before": ["g", "S"],
+      "commands": ["workbench.action.showAllSymbols"]
+    },
+    {
+      "before": ["g", "l"],
+      "commands": ["workbench.action.gotoLine"]
+    },
+    // 书签切换、列出所有
+    {
+      "before": ["m", "t"],
+      "commands": ["bookmarks.toggle"]
+    },
+    {
+      "before": ["m", "l"],
+      "commands": ["bookmarks.listFromAllFiles"]
+    },
+    // 命令提示
+    {
+      "before": ["<Leader>"],
+      "commands": ["whichkey.show"]
+    },
+    // 整理到一行
+    {
+      "before": ["<Leader>", "j"],
+      "after": ["J"]
+    },
+    // 切换折叠
+    {
+      "before": ["<Leader>", "t"],
+      "commands": ["editor.toggleFold"]
+    },
+    // 上下复制当前行
+    {
+      "before": ["<Leader>", "d"],
+      "commands": ["editor.action.copyLinesDownAction"]
+    },
+    {
+      "before": ["<Leader>", "D"],
+      "commands": ["editor.action.copyLinesUpAction"]
+    },
+    // 格式化文档 shift+alt+f
+    {
+      "before": ["<Leader>", "f"],
+      "commands": ["editor.action.formatDocument"]
+    },
+    // 在文件树显示当前文件
+    {
+      "before": ["<Leader>", "e"],
+      "commands": ["workbench.explorer.fileView.focus"]
+    },
+    // 关闭当前组其他tab
+    {
+      "before": ["<Leader>", "w"],
+      "commands": ["workbench.action.closeOtherEditors"]
+    },
+    // 保存所有文件
+    {
+      "before": ["<Leader>", "z"],
+      "commands": ["workbench.action.files.saveAll"]
+    },
+    // 上下左右切分组
+    {
+      "before": ["<Leader>", "s", "h"],
+      "commands": ["workbench.action.splitEditorLeft"]
+    },
+    {
+      "before": ["<Leader>", "s", "j"],
+      "commands": ["workbench.action.splitEditorDown"]
+    },
+    {
+      "before": ["<Leader>", "s", "k"],
+      "commands": ["workbench.action.splitEditorUp"]
+    },
+    {
+      "before": ["<Leader>", "s", "l"],
+      "commands": ["workbench.action.splitEditorRight"]
+    }
+  ],
+  "vim.insertModeKeyBindingsNonRecursive": [
+    {
+      "before": ["j", "k"],
+      "after": ["<Esc>"]
+    }
+  ],
+  "vim.visualModeKeyBindingsNonRecursive": [
+    // 复制后光标移动到最后
+    {
+      "before": ["y"],
+      "after": ["y", "g", "v", "<Esc>"]
+    },
+    // 粘贴而不复制
+    {
+      "before": ["p"],
+      "after": ["\"", "_", "d", "P"]
+    },
+    // 移动至行首、行尾
+    {
+      "before": ["H"],
+      "after": ["^"]
+    },
+    {
+      "before": ["L"],
+      "after": ["g", "_"]
+    },
+    // 删除而不复制
+    {
+      "before": ["d"],
+      "after": ["\"", "_", "d"]
+    },
+    {
+      "before": ["D"],
+      "after": ["\"", "_", "D"]
+    },
+    // 修改而不复制
+    {
+      "before": ["c"],
+      "after": ["\"", "_", "c"]
+    },
+    {
+      "before": ["C"],
+      "after": ["\"", "_", "C"]
+    },
+    // 命令提示
+    {
+      "before": ["<Leader>"],
+      "commands": ["whichkey.show"]
+    },
+    // 整理到一行
+    {
+      "before": ["<Leader>", "j"],
+      "after": ["J"]
+    },
+    // 调整缩进
+    {
+      "before": [">"],
+      "commands": ["editor.action.indentLines"]
+    },
+    {
+      "before": ["<"],
+      "commands": ["editor.action.outdentLines"]
+    }
+  ],
+  "vim.operatorPendingModeKeyBindingsNonRecursive": [
+    // 移动至行首、行尾
+    {
+      "before": ["H"],
+      "after": ["^"]
+    },
+    {
+      "before": ["L"],
+      "after": ["g", "_"]
+    }
+  ],
+  "sync.gist": "97ec082d87f412ebaf68b6f5b52f3a4a",
+  // 格式化
+  "[markdown]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[less]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[scss]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
+}
